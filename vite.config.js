@@ -9,9 +9,4 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true
   },
-  // Add server configuration to check for errors during development
-  server: {
-    open: true,
-    port: 3000
-  }
 })
