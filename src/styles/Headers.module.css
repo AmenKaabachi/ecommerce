@@ -1,6 +1,15 @@
-h1 {
+.welcome-header {
   font-size: 3.2em;
   line-height: 1.1;
   text-align: center;
-  margin-top: 5rem;
-}
+  color: #6c5ce7;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  padding: 10px 0;
+} 

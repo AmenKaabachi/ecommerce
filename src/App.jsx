@@ -1,23 +1,30 @@
-import './styles/App.css'
-import styles from './styles/Headers.module.css'
-import './styles/Paragraphs.module.css'
-import Navbar from './components/Navbar'
-// import statement for unused 'navbarStyles'
-import './styles/Navbar.module.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar'; // Common navbar
+//import Footer from './components/Footer'; // Optional footer
+import Home from './pages/Home'; // Import the new Home page component
+//import About from './pages/About'; // Example of additional page
 
 function App() {
   return (
-    <div>
-      <header>
+    <Router basename="/ecommerce">
+      <div>
+        {/* Navbar displayed on all pages */}
         <Navbar />
-      </header>
-      <main className="container" style={{ paddingTop: '70px' }}>
-        <section>
-          <h1 className={`${styles.h1} text-center mt-5`}>Welcome to our shop !!!</h1>
-        </section>
-      </main>
-    </div>
-  )
+        
+        {/* Routing logic to switch between pages */}
+        <main className="container" style={{ paddingTop: '70px' }}>
+          <Routes>
+            <Route path="/" element={<Home />} /> {/* Default Home page */}
+           {/* <Route path="/about" element={<About />} />  Example About page */}
+          </Routes>
+        </main>
+        
+        {/* Footer displayed on all pages 
+        <Footer />
+        */}
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
