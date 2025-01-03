@@ -1,20 +1,20 @@
-import styles from '../styles/Headers.module.css'; // Import your styles
+import './styles/Home.css'; // Import the new CSS file
 
 function Home() {
   return (
-    <div>
+    <main className="home-container">
       {/* Welcome header */}
-      <h1 className={`${styles['welcome-header']} mt-5 text-center`}>
+      <h1 className="home-header">
         Welcome to our shop !!!
       </h1>
 
       {/* Example content */}
-      <section>
-        <p className="text-center">
+      <section className="home-content">
+        <p>
           Browse our amazing collection of products and find your next favorite item!
         </p>
       </section>
-    </div>
+    </main>
   );
 }
 

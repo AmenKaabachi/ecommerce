@@ -1,0 +1,7 @@
+.navbar {
+  position: fixed;              /* Fix the navbar at the top */
+  top: 0;                       /* Position it at the top */
+  width: 100%;                  /* Make it full width */
+  background-color: rgb(45, 213, 65); /* Optional, for better readability */
+
+}
